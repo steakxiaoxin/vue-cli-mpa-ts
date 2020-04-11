@@ -1,0 +1,14 @@
+{
+  "index": {
+    "title": "首页"
+  },
+  "shop": {
+    "title": "商店"
+  },
+  "shopDetail": {
+    "title": "商店详情"
+  },
+  "page1": {
+    "title": "第一页"
+  }
+}
