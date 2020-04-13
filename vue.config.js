@@ -1,6 +1,8 @@
 const path = require('path')
 const fs = require('fs')
 
+console.log('NODE_ENV', process.env.NODE_ENV)
+
 function getPages() {
   let entries = {}
   const pageConfig = require('./config/page.json')

@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve:dev": "vue-cli-service serve --mode dev",
+    "serve:stage": "vue-cli-service serve --mode stage",
+    "serve:pre": "vue-cli-service serve --mode pre",
+    "serve:prd": "vue-cli-service serve --mode prd",
+    "build:dev": "vue-cli-service build --mode dev",
+    "build:stage": "vue-cli-service build --mode stage",
+    "build:pre": "vue-cli-service build --mode pre",
+    "build:prd": "vue-cli-service build --mode prd",
     "lint": "vue-cli-service lint",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\""
   },
