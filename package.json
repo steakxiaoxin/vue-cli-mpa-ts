@@ -3,20 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve:dev": "vue-cli-service serve --mode dev",
-    "serve:stage": "vue-cli-service serve --mode stage",
-    "serve:pre": "vue-cli-service serve --mode pre",
-    "serve:prd": "vue-cli-service serve --mode prd",
-    "build:dev": "vue-cli-service build --mode dev",
-    "build:stage": "vue-cli-service build --mode stage",
-    "build:pre": "vue-cli-service build --mode pre",
-    "build:prd": "vue-cli-service build --mode prd",
     "lint": "vue-cli-service lint",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\""
+    "build:dev": "vue-cli-service build --mode dev",
+    "build:prd": "vue-cli-service build --mode prd",
+    "build:pre": "vue-cli-service build --mode pre",
+    "build:stage": "vue-cli-service build --mode stage",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
+    "serve:dev": "vue-cli-service serve --mode dev",
+    "serve:prd": "vue-cli-service serve --mode prd",
+    "serve:pre": "vue-cli-service serve --mode pre",
+    "serve:stage": "vue-cli-service serve --mode stage"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^2.6.11",
+    "element-ui": "^2.4.5",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.1",
@@ -31,6 +32,7 @@
     "@vue/eslint-config-prettier": "^5.0.0",
     "@vue/eslint-config-typescript": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -38,6 +40,7 @@
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",
     "typescript": "3.5.3",
+    "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
   }
 }
