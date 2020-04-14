@@ -1,14 +1,8 @@
 {
-  "index": {
-    "title": "首页"
+  "demo-1": {
+    "title": "详细demo"
   },
-  "shop": {
-    "title": "商店"
-  },
-  "shopDetail": {
-    "title": "商店详情"
-  },
-  "page1": {
-    "title": "第一页"
+  "demo-2": {
+    "title": "简易demo"
   }
 }

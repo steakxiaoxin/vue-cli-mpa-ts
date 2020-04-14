@@ -1,3 +1,4 @@
+```javascript
 // 完整组件列表和引入方式
 
 import Vue from 'vue'
@@ -160,3 +161,4 @@ Vue.prototype.$confirm = MessageBox.confirm
 Vue.prototype.$prompt = MessageBox.prompt
 Vue.prototype.$notify = Notification
 Vue.prototype.$message = Message
+```

@@ -37,3 +37,5 @@ yarn lint
 
 ## TODO 
 tsconfig
+eslint
+提交前 lint
