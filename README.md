@@ -22,6 +22,18 @@ yarn lint
 
 ### Customize configuration
 
-- element-ui 采用按需引入
+## 开发事项
+- vscode 安装 prettier 插件
 
-TODO 
+
+## 第三方包
+
+- element-ui 采用按需引入
+- dayjs 日期格式化
+- lodash 工具函数
+  - 使用按需引入`import get from 'lodash/get'`
+
+
+
+## TODO 
+tsconfig
