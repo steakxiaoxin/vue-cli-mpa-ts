@@ -22,5 +22,6 @@ yarn lint
 
 ### Customize configuration
 
+- element-ui 采用按需引入
+
 TODO 
-element-ui 采用按需引入
