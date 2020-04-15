@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 console.log('NODE_ENV', process.env.NODE_ENV)
+console.log('APP_ENV', process.env.APP_ENV)
 
 function getPages() {
   let entries = {}
@@ -27,9 +28,11 @@ const pages = getPages()
 // console.log('pages: ', pages)
 
 const vueConfig = {
+  publicPath: process.env.NODE_ENV == 'production' ? '/dist/' : '/',
   pages: Object.assign({}, pages, {
     app: './src/main.ts', // 配置主入口文件（会生成 app.html，vue cli3并没有提供直接配置入口文件的选项）
   }),
+  productionSourceMap: false,
   devServer: {
     before: app => {
       app.get('/', (req, res, next) => {
@@ -41,18 +44,22 @@ const vueConfig = {
     },
   },
   chainWebpack: config => {
+    config.when(process.env.NODE_ENV === 'development', config => config.devtool('cheap-eval-source-map'))
+    config.plugins.delete('progress')
+    config.plugin('simple-progress-webpack-plugin').use(require.resolve('simple-progress-webpack-plugin'))
+
     for (let pageItem in pages) {
       config.plugins.delete(`prefetch-${pageItem}`)
     }
 
-    if (process.env.NODE_ENV === 'production') {
-      config.plugin('extract-css').tap(() => [
-        {
-          path: path.join(__dirname, './dist'),
-          filename: 'css/[name].[contenthash:8].css',
-        },
-      ])
-    }
+    // if (process.env.APP_ENV === 'prd') {
+    //   config.plugin('extract-css').tap(() => [
+    //     {
+    //       path: path.join(__dirname, './dist'),
+    //       filename: 'css/[name].[contenthash:8].css',
+    //     },
+    //   ])
+    // }
   },
 }
 

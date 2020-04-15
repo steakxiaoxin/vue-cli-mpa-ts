@@ -8,4 +8,4 @@ const prefixEnv: PrefixEnv = {
   pre: 'pre',
   prd: 'prd',
 }
-export const prefix = prefixEnv[process.env.NODE_ENV]
+export const prefix = prefixEnv[process.env.APP_ENV]

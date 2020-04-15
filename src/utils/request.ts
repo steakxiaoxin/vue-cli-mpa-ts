@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-console.log('NODE_ENV', process.env.NODE_ENV)
+console.log('APP_ENV', process.env.APP_ENV)
 
 // Request interceptors
 axios.interceptors.request.use(
