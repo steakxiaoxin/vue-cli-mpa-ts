@@ -15,16 +15,16 @@
 ts
 
 ## 开发事项
-- vscode 安装 prettier 插件
+- vscode 安装 prettier 插件 ==> 手动格式化代码
+- commit 前自动 lint ==> 自动格式化代码
 - 使用 commitlint 提交规范
 
 
 
 ## 提交规范
 
-commitlint 对格式的说明如下：
+type 类型说明如下：
 
-- type代表某次提交的类型，比如是修复一个bug还是增加一个新的feature。所有的type类型如下：
 - feat：新增feature
 - fix：修复bug
 - docs：仅仅修改了文档，比如README, CHANGELOG等
