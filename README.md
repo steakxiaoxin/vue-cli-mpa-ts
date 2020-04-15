@@ -22,6 +22,8 @@ yarn lint
 
 ### Customize configuration
 
+ts
+
 ## 开发事项
 - vscode 安装 prettier 插件
 
@@ -36,6 +38,5 @@ yarn lint
 
 
 ## TODO 
-tsconfig
 eslint
 提交前 lint
