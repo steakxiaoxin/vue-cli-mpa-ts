@@ -1,31 +1,40 @@
 # vue-cli-mpa-ts
 
-## Project setup
-```
-yarn install
-```
+## 命令
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+|     script     |       explanation        |
+| :------------: | :----------------------: |
+| `yarn install` |           安装           |
+|  `yarn serve`  | 开发环境编译并开启热更新 |
+|  `yarn build`  |    生产编译并压缩打包    |
+|  `yarn lint`   |    按lint规则格式文件    |
+| `yarn commit`  | 按commitlint规则提交代码 |
 
-### Compiles and minifies for production
-```
-yarn build
-```
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
 
 ts
 
 ## 开发事项
 - vscode 安装 prettier 插件
+- 使用 commitlint 提交规范
+
+
+
+## 提交规范
+
+commitlint 对格式的说明如下：
+
+- type代表某次提交的类型，比如是修复一个bug还是增加一个新的feature。所有的type类型如下：
+- feat：新增feature
+- fix：修复bug
+- docs：仅仅修改了文档，比如README, CHANGELOG等
+- style：仅仅修改了空格，格式缩进，不改变代码逻辑
+- refactor：代码重构，没有加新功能或者修复bug
+- perf：优化相关，比如提升性能，体验
+- test：测试用例，包括单元测试，集成测试等
+- chore：改变构建流程、或者增加依赖库、工具等
+- revert：回滚到上一个版本
+
 
 
 ## 第三方包
@@ -39,4 +48,3 @@ ts
 
 ## TODO 
 eslint
-提交前 lint
