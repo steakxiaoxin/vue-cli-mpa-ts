@@ -3,6 +3,7 @@
  * 第一位为level: 0为disable，1为warning，2为error，
  * 第二位为应用与否: 可选always|never
  * 第三位该rule的值
+ * rule 规则说明: https://commitlint.js.org/#/reference-rules
  */
 
 module.exports = {

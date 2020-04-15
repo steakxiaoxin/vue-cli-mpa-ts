@@ -13,6 +13,7 @@
     "serve:prd": "vue-cli-service serve --mode prd",
     "serve:pre": "vue-cli-service serve --mode pre",
     "serve:stage": "vue-cli-service serve --mode stage",
+    "precommit": "yarn lint",
     "commit": "git add -A && git-cz"
   },
   "dependencies": {
