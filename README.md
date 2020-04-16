@@ -47,4 +47,3 @@ type 类型说明如下：
 
 
 ## TODO 
-eslint
