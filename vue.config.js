@@ -1,5 +1,10 @@
 const path = require('path')
 const fs = require('fs')
+const { program } = require('commander')
+
+program.option('-p, --pages <items>', 'comma for pages', e => e.split(','))
+program.parse(process.argv)
+const inputPages = program.pages
 
 console.log('NODE_ENV', process.env.NODE_ENV)
 console.log('APP_ENV', process.env.APP_ENV)
@@ -10,6 +15,9 @@ function getPages() {
   const pageList = path.resolve(__dirname, 'src/pages')
   const pageDir = fs.readdirSync(pageList)
   pageDir.forEach(pageName => {
+    if (inputPages) {
+      if (!inputPages.includes(pageName)) return
+    }
     const pageData = pageConfig[pageName] || {}
     entries[pageName] = {
       entry: 'src/pages/' + pageName + '/index.ts',
