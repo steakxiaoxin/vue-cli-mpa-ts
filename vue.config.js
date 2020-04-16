@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const chalk = require('chalk')
 const { program } = require('commander')
+const TerserPlugin = require('terser-webpack-plugin')
 
 program.option('-p, --pages <items>', 'comma for pages', e => e.split(',')).parse(process.argv)
 const inputPages = program.pages
@@ -58,6 +59,15 @@ const vueConfig = {
     config.when(process.env.NODE_ENV === 'development', config => config.devtool('cheap-eval-source-map'))
     config.plugins.delete('progress')
     config.plugin('simple-progress-webpack-plugin').use(require.resolve('simple-progress-webpack-plugin'))
+    // config.when(process.env.NODE_ENV === 'development', config => config.plugin('hard-source-webpack-plugin').use(require.resolve('hard-source-webpack-plugin')))
+    config.when(process.env.NODE_ENV === 'development', config =>
+      config.optimization.minimizer([
+        new TerserPlugin({
+          parallel: true,
+          cache: true,
+        }),
+      ])
+    )
 
     for (let pageItem in pages) {
       config.plugins.delete(`prefetch-${pageItem}`)
