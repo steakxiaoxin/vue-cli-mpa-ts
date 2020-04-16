@@ -3,8 +3,7 @@ const fs = require('fs')
 const chalk = require('chalk')
 const { program } = require('commander')
 
-program.option('-p, --pages <items>', 'comma for pages', e => e.split(','))
-program.parse(process.argv)
+program.option('-p, --pages <items>', 'comma for pages', e => e.split(',')).parse(process.argv)
 const inputPages = program.pages
 const log = console.log
 
