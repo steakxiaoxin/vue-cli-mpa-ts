@@ -1,13 +1,17 @@
 const path = require('path')
 const fs = require('fs')
+const chalk = require('chalk')
 const { program } = require('commander')
 
 program.option('-p, --pages <items>', 'comma for pages', e => e.split(','))
 program.parse(process.argv)
 const inputPages = program.pages
+const log = console.log
 
-console.log('NODE_ENV', process.env.NODE_ENV)
-console.log('APP_ENV', process.env.APP_ENV)
+log(chalk.magentaBright('-----------------------'))
+log(chalk.green('NODE_ENV: '), chalk.yellow(process.env.NODE_ENV))
+log(chalk.green('APP_ENV:  '), chalk.yellow(process.env.APP_ENV))
+log(chalk.magentaBright('-----------------------'))
 
 function getPages() {
   let entries = {}

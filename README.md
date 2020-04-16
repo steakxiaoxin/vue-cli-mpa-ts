@@ -2,13 +2,13 @@
 
 ## 命令
 
-|     script     |       explanation        |
-| :------------: | :----------------------: |
-| `yarn install` |           安装           |
-|  `yarn serve`  | 开发环境编译并开启热更新 |
-|  `yarn build`  |    生产编译并压缩打包    |
-|  `yarn lint`   |    按lint规则格式文件    |
-| `yarn commit`  | 按commitlint规则提交代码 |
+|     script     |                         explanation                          |
+| :------------: | :----------------------------------------------------------: |
+| `yarn install` |                             安装                             |
+|  `yarn serve`  | 开发环境编译并开启热更新<br />(打包指定的页面 使用  `yarn serve -p page1,page2`) |
+|  `yarn build`  |                      生产编译并压缩打包                      |
+|  `yarn lint`   |                      按lint规则格式文件                      |
+| `yarn commit`  |                   按commitlint规则提交代码                   |
 
 
 
