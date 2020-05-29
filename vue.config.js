@@ -73,6 +73,14 @@ const vueConfig = {
       config.plugins.delete(`prefetch-${pageItem}`)
     }
 
+    config.plugin('define').tap(definitions => {
+      Object.assign(definitions[0]['process.env'], {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        APP_ENV: JSON.stringify(process.env.APP_ENV),
+      })
+      return definitions
+    })
+
     // if (process.env.APP_ENV === 'prd') {
     //   config.plugin('extract-css').tap(() => [
     //     {
