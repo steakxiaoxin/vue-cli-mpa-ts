@@ -60,14 +60,7 @@ const vueConfig = {
     config.plugins.delete('progress')
     config.plugin('simple-progress-webpack-plugin').use(require.resolve('simple-progress-webpack-plugin'))
     // config.when(process.env.NODE_ENV === 'development', config => config.plugin('hard-source-webpack-plugin').use(require.resolve('hard-source-webpack-plugin')))
-    config.when(process.env.NODE_ENV === 'development', config =>
-      config.optimization.minimizer([
-        new TerserPlugin({
-          parallel: true,
-          cache: true,
-        }),
-      ])
-    )
+    config.when(process.env.NODE_ENV === 'development', config => config.optimization.minimizer('terser').use(TerserPlugin))
 
     for (let pageItem in pages) {
       config.plugins.delete(`prefetch-${pageItem}`)
