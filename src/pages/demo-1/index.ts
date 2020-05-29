@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Button } from 'element-ui'
+import { Button } from 'vant'
 
 import App from './App.vue'
 import router from './router'
